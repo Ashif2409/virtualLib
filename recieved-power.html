@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intro.js/7.0.1/introjs.min.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intro.js/7.0.1/intro.js"></script>
+
+    <title>Friis Transmission</title>
+</head>
+
+<style>
+  *{
+    margin: 0;
+    padding: 0;
+  }
+  body{
+    
+    background-color:#1f2737;
+    background-image: url("https://th.bing.com/th/id/OIP.bhc1YdveA33i3BjcqmOhWAHaNK?pid=ImgDet&w=188&h=333&c=7&dpr=1.3");
+    
+  }
+.customTooltip *{
+  color: #006d0b;
+  font-size: 18px;
+  /* background-color: #3e3e3e; */
+}
+
+.customTooltip .introjs-tooltip-title {
+  color: #ff1313;
+}
+.inputs{
+  display: flex;
+    flex-direction: column;
+    width: 30%;
+    justify-content: center;
+    margin: auto;
+}
+.inputs input{
+  height: 42px;
+    border-radius: 9px;
+    border: none;
+    outline: none;
+    margin-bottom: 10px;
+}
+.heading{
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 50px;
+  color: beige
+  ;
+}
+select {
+  background-color: #f2f2f2;
+  border: none;
+  padding: 8px;
+  font-size: 16px;
+  height: 42px;
+    border-radius: 9px;
+    border: none;
+    outline: none;
+    margin-bottom: 10px;
+}
+select {
+  appearance: none;
+  -webkit-appearance: none;
+  background-color: #f2f2f2;
+  border: none;
+  padding: 8px;
+  font-size: 16px;
+}
+
+select::after {
+  content: '\25BC';
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  color: #666;
+  font-size: 14px;
+  pointer-events: none;
+  border: none;
+  outline: none;
+}
+
+</style>
+
+<body>
+  <div class="heading">
+
+    <h1>Recieved Power</h1>
+  </div>
+    <div class="inputs">
+    <input type="number" id="Pt" placeholder=" Enter the value of Pt" />
+    <input type="number" id="Gt" placeholder=" Enter the value of Gt" />
+    <input type="number" id="distance" placeholder=" Enter the distance" />
+    <select title="selector" name="selector" id="selector" aria-placeholder="Select">
+      <option disabled selected value="">Select an option</option>
+        <option value="freq" id="f">frequency</option>
+        <option value="lamb">lambda</option>
+    </select>
+    <input type="number" id="frequency" placeholder="frequency" disabled="true"/>
+    <input type="number" id="lambda" placeholder="lambda" disabled="true"/>
+    <!-- <br>
+    <br> -->
+  </div>
+
+    <br>
+    <br>
+    <button type="submit" onclick="calc()" class="btn" id="calculate">calulate</button>
+    <input type="number" id="answer" placeholder="output" readonly />
+
+    <br>
+    <br>
+    
+    <div class="mychartclass" style="width: 500px">
+       <canvas id="myChart1"></canvas>
+    </div>
+
+    <div class="mychartclass" style="width: 500px">
+      <canvas id="myChart2"></canvas>
+    </div>
+    
+    <script src="recieved-power.js"></script>
+  </body>
+    
+</html>

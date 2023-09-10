@@ -1,0 +1,82 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Number system converter</title>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600|Questrial|Raleway:400,600,700" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+ 
+</head>
+
+<body>
+  <!-- Container -->
+  <div class="container">
+
+    <div id="flashMessage" class="flash-msg error-msg"></div>
+
+    <div class="triangle-corner"></div>
+
+    <!-- Header -->
+    <header class="logo">
+      <h2>EC261 Project</h2><br>
+      <h2>Group Number 2</h2>
+    </header>
+    <!-- End Header -->
+
+    <!-- Description -->
+    <section class="app-description">
+      <div class="app-description-container">
+        <h1>Number system converter</h1>
+       
+      </div>
+    </section>
+    <!-- End Description -->
+
+    <!-- Form -->
+    <section class="form-app-description">
+      <div class="dropdown">
+        <!-- From select menu -->
+        <div id="selectMenu1" class="select-menu">
+          <select id="fromOption" name="fromMenu">
+            <option value="0">From</option>
+            <option value="1">Decimal</option>
+            <option value="2">Binary</option>
+            <option value="3">Octal</option>
+            <option value="4">Hexadecimal</option>
+          </select>
+        </div>
+
+        <span class="helper-text">to</span>
+        <!-- To select menu-->
+        <div id="selectMenu2" class="select-menu">
+          <select id="toOption" name="toMenu">
+            <option value="0">...</option>
+            <option value="1">Decimal</option>
+            <option value="2">Binary</option>
+            <option value="3">Octal</option>
+            <option value="4">Hexadecimal</option>
+          </select>
+        </div>
+      </div>
+      <!-- User input and submit button-->
+      <div class="form-app">
+        <input id="userInput" type="text" class="input-number" placeholder="Enter a number">
+        <button id="btnConversion" type="button" class="btn-show-result hvr-sweep-to-right">CONVERT</button>
+      </div>
+    </section>
+    <!-- End Form -->
+
+    <div id="outputNumber" class="output-conversion"></div>
+
+  
+  </div>
+
+  <!-- Javascript resources -->
+  <script type="module" src="./main.js"></script>
+
+
+</body>
+
+</html>
